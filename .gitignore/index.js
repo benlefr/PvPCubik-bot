@@ -60,7 +60,7 @@ bot.on('message', message => {
         .setColor('#03F6EE')
         .setDescription("le bot de la PvpCubik")
         .addField("commande:", '-help -msgp  -slt -inv')
-        .setFooter("Enjoy ")
+               .setFooter("Enjoy " + ":flag_mf: ")
                 message.channel.send(présentation)
 
                }  
