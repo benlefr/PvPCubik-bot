@@ -43,7 +43,23 @@ bot.on('ready', () => {
 
 })
 bot.on('message', message => {
-
+ if (message.content.startsWith(PREFIX + "sondage")){
+  
+      let args = message.content.split(" ").slice(1);
+      let thingtoecho = args.join (" ")
+  
+      var embed= new Discord.RichEmbed()
+  .setDescription("Sondage")
+  .addField(thingtoecho, "Répondre avec :white_check_mark: ou :x: ")
+  .setColor("0xB40404")
+  .setTimestamp()
+  message.channel.sendEmbed(embed).then(function (message) {
+    message.react("✅")
+    message.react("❌")
+  }
+  
+  )
+      }
 
 
   if (message.content[0] === PREFIX) {
